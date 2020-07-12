@@ -53,4 +53,11 @@ AWS
 　-商品検索機能部分 AppSync〜DynamoDB【貴田、石野】  
 　-ポイント参照部分 Lambda〜DynamoDB【松隈】  
   　⇢余裕あればAPI Gateway
-  -AppSync深堀り【賀谷】
+  -AppSync深堀り【賀谷】  
+ ＜7/12タスク＞  
+ ・仮説検証  
+ 　⇢必要となる設定箇所から逆引きで必要な設計を確認する  
+　 　（実装を想定して連携回りで必要な設定も確認（IAM、Network関連））
+ 　- ポイント参照機能 Lambda〜DynamoDB 間（実機動作込）【松隈】  
+   - 商品購入機能 Stepfunctions 〜 Lambda間【貴田】
+   - AppSync〜APIGateway ／AppSync〜Stepfunctions間【石野】  　
