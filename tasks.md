@@ -60,6 +60,6 @@ AWS
 　 　（実装を想定して連携回りで必要な設定も確認（IAM、Network関連））  
  　- ポイント参照機能 Lambda〜DynamoDB 間（実機動作込）【松隈】  
    - 商品購入機能 Stepfunctions 〜 Lambda間【貴田】
-   - AppSync〜APIGateway ／AppSync〜Stepfunctions間【石野】  　
- ＜7/19タスク＞  
+   - AppSync〜APIGateway ／AppSync〜Stepfunctions間【石野】  
+ ＜7/19タスク＞    
  　添付「0719宿題」参照  
