@@ -62,4 +62,4 @@ AWS
    - 商品購入機能 Stepfunctions 〜 Lambda間【貴田】
    - AppSync〜APIGateway ／AppSync〜Stepfunctions間【石野】  　
  ＜7/19タスク＞  
- 　添付「0719宿題」参照
+ 　添付「0719宿題」参照  
