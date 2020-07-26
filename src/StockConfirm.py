@@ -7,8 +7,8 @@ class OutOfStockException(Exception):
     pass
 
 def lambda_handler(event, context):
-    tableName = 'Stock'
-    primaryKeyName = 'ProductId'
+    tableName = 'StockTable'
+    primaryKeyName = 'ProductID'
     purchaseProductId = int(event['ProductId'])
     purchaseCount = int(event['Count'])
     targetData = dynamodb.Table(tableName).get_item(Key={primaryKeyName: purchaseProductId})['Item']
@@ -30,4 +30,4 @@ def lambda_handler(event, context):
         },
         ReturnValues="ALL_NEW"
     )
-    return response
+    return event
