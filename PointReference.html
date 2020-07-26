@@ -3,57 +3,74 @@
 <head>
   <meta charset="utf-8">
   <title>sample</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script>
+    var userId = null;
+
+    function search() {
+      userId = $('#searchUserId').val();
+      if (userId == null || userId == '') {
+        userId = 'all';
+      }
+      $.getJSON(
+        'https://x9nlvaia5h.execute-api.ap-northeast-1.amazonaws.com/testapi/testapi',
+        {UserId: userId},
+      function(data) {
+        $('#usage-table-body tr').remove();
+        var items = [];
+        var len;
+
+        if (data.length == null) {
+          len = 1;
+        } else {
+          len = data.length;
+        }
+
+        $('#usage-table-body tr').remove();
+        if (len > 1) {
+          var items = [];
+          var len = data.length;
+
+          for(var i = 0; i< len; i++){
+            var tr = $('<tr />');
+            var userId = $('<td />').text(data[i]['UserId']);
+            var point = $('<td />').text(data[i]['Point']);
+            tr.append(userId);
+            tr.append(point);
+            $('#usage-table-body').append(tr);   
+          }
+        }else{
+          var tr = $('<tr />');
+          var userId = $('<td />').text(data['UserId']);
+          var point = $('<td />').text(data['Point']);
+          tr.append(userId);
+          tr.append(point);
+          $('#usage-table-body').append(tr); 
+        }
+      }
+    );
+  };
+      
+
+    </script>
+
 </head>
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script>
-  $(function() {
-    $.getJSON(
-  'https://x9nlvaia5h.execute-api.ap-northeast-1.amazonaws.com/testapi/testapi',
-  function(data) {
-    var items = [];
-    var len = data.length;
 
-    for(var i = 0; i< len; i++){
-      //items.push('<li id="' + i + '">' + data[i].id + '</li>');
 
-      var tr = $('<tr />');
-      var id = $('<td />').text(data[i].id);
-      var userId = $('<td />').text(data[i].user_id);
-      var insDate = $('<td />').text(data[i].insdate);
-      var point = $('<td />').text(data[i].point);
-      tr.append(id);
-      tr.append(userId);
-      tr.append(insDate);
-      tr.append(point);
-      $('#usage-table-body').append(tr);   
-    }
+<label>ユーザーID：</label>
 
-    //dataがサーバから受け取るjson値
-    // $.each(data, function(key, val) {
-    //   items.push('<li id="' + key + '">' + data[i] + '</li>');
-    // });
-    //サーバから受け取った値をULリストにしてBody内に挿入
-    // $('<ul/>', {
-    //   'class': 'my-new-list',
-    //   html: items.join('')
-    // }).appendTo('body');
-  }
-);
-  });
-    
-  </script>
-
+<input type=text id='searchUserId'>
+<button id="searchBtn" onclick="search()">検索</button>
 <table border="1">
       <tr>
-          <th>id</th>
           <th>user_id</th>
-          <th>insdate</th>
           <th>point</th>
       </tr>
   <tbody id="usage-table-body"></tbody>
 </table>
-
 
 </body>
 </html>
