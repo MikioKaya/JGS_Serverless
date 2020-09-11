@@ -53,7 +53,7 @@ Therefore, in order to promote the development of systems using the cloud, it is
 
 サーバレスアーキテクチャーを適用することで，開発時に作成するドキュメント量と構築作業量が削減され，ビジネスアジリティが向上することが確認された．
 ー
-We have confirmed that the serverless architecture improves business agility by reducing the amount of documentation and construction work created during development.
+We have confirmed that the serverless architecture improves business agility by reducing the amount of documentation and system build work created during development.
 
 加えて，今回検証できていない以下の2つの観点を追求することで，更にビジネスアジリティを向上させる可能性があると考える．
 ー
