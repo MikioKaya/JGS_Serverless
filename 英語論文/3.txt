@@ -1,0 +1,89 @@
+3. Verification of Business Agility Improvements by Applying a Serverless Architecture
+
+　In this chapter, we built a website for purchasing goods using a serverless architecture, and compare it with the construction work in an on-premises environment, and describe the result of verifying whether the development period will be reduced.
+　The scope of verification is the part of system development that is developed by the IT department using a serverless architecture based on the business strategy determined by the management.
+　The reduction of the development period is verified from the following two points of view.
+　・Amount of documentation
+　・System build work time
+
+3.1 Temporary and Premises
+　Hypotheses and assumptions in the verification process are described.
+
+3.1.1 Temporary
+　The development by applying a serverless architecture, it is hypothesized that the development period will be reduced by decreasing the amount of documents  in each stage of the system development process and reducing the system build work time.
+
+3.1.2 Premises
+　Premises for the verification process are described.
+(1)Cloud service providers
+
+In this verification, we built a website for purchasing goods using a serverless service provided by Amazon Web Services (AWS), a leading cloud service provider.[3]
+
+(2)Reasons for choosing the model system
+
+This is because the Japanese government is promoting cashless payments, and we believe that the number of e-commerce site launches will increase.
+
+"The Current Status and Significance of Cashless Payment by the Ministry of Economy, Trade and Industry" [4], the advantages of promoting cashless payment are "increased efficiency and sales at stores" and "data utilization".When a company with a physical store launches an e-commerce site, it can expect to increase sales by diversifying its sales channels.  [ Also or In addition ], by analyzing and utilizing the data of purchase information on the site, it is possible to link to marketing and product development.
+
+We believe that the number of e-commerce sites will increase because cashless payment is the main means of payment and the benefits of promoting cashless payment can be enjoyed.
+
+(3)Building a goods purchasing website
+
+The requirements for the website for purchasing goods are summarized in the requirements specification (Annex A-1), and a system that satisfies the requirements is constructed.The serverless architecture to be applied is based on the architecture design published in AWS samples, which is quality assured by AWS. We reused Serverless Airline Booking (an example of an airline ticket purchasing system) [5], which has similar to the verification requirements, as the reference architecture and designed a system configuration that meets the requirements of this system.(Figure 2)
+
+Figure 2 System Configuration diagram of the goods purchasing website
+
+3.2 Verification Method
+The measurement of system build work time and Amount of documentation was performed by the following procedures.
+
+3.2.1 System build work time
+The system build work was carried out in the following procedures from A-1 to A-4. Also, the measurement of the system build work time was done by measuring the time required for steps A-3 and A-4, which are the build work itself.
+
+Step A-1: Based on the requirements specification, refer to the AWS Developer Guide and the tutorials in the guide to learn about the design and configuration required for the selected AWS service in advance.
+
+Step A-2: Organize the results of pre-learning and summarize the data used in the system as a data definition document (Appendix B-1). Summarize the values set in the AWS Management Console as a parameter sheet (Appendix B-2) for each function to be implemented in the goods purchasing website.
+
+Step A-3: Develop the application source code for a goods purchasing website using the runtime supported by Lambda. Code development is divided among the members.
+
+Step A-4: Based on the steps in the developer's guide and tutorial used in Step A-1, build a goods purchasing website using the AWS Management Console and AWS CLI according to the prepared data definitions and parameter sheets, and measure the system build working time. The systeme building process will be handled by one member who is inexperienced in AWS development, with the exception of the implementation of the authentication functions required to launch the Step Functions state machine from an AppSync query.
+
+3.2.2 Amount of documentation
+We measured the amount of documents  according to the following procedure B-1 to B-4.
+
+Step B-1: In this section, we make a list of deliverables that are required for waterfall model development in on-premise environment. Note that this list of deliverables is a collection of standardized deliverables from each company to which the member belongs. Because it is based on the knowledge of the system build, we believe that the comprehensiveness of the deliverables is assured.
+
+Step B-2: 3.2.1 After the system build work, set up the deliverables required for the development by applying a serverless architecture to the list of deliverables made in step B-1.
+
+Step B-3: The amount of work required to create a document for on-premise development is used as a criterion for comparison and evaluation with the amount of work required to create the same document in development by applying a serverless architecture. The evaluation is in the following three stages.
+　・Same workload
+　・Reduced workload
+　・No documentation required
+
+Step B-4: For documents evaluated as "Reduced workload" and "No documentation required" in step B-3, provide a rationale for the merits of applying a serverless architecture.
+
+The results of the above steps B-1 to B-4 are summarized as an evaluation sheet (Appendix C-1). The issues that emerged during the system build work of 3.2.1 are also described in the evaluation sheet.
+
+
+3.3 Verification results
+The measurement results of the system build work time and the amount of documentation are described below.
+
+3.3.1 System build work time
+The total system build work time of the goods purchasing website (total of steps A-3 and A-4 in 3.2.1) was 10 hours. Step A-3: Development of application source code took 7 hours in cumulative total, and Step A-4: Set up time using the AWS management console and AWS CLI took 3 hours.
+
+3.3.2 Amount of documentation
+As shown in Figure 3, 68 documents were required for the waterfall model development in an on-premises environment, and 56 documents were required for development by applying a serverless architecture.
+
+Development by applying  a serverless architecture reduced the number of documents created by 12 fewer than on-premise development (18% of the documents created during on-premise development)
+
+Based on the amount of work required in creating documents for on-premise development, the amount of work required in developing the same document in developed by applying a serverless architecture was as follows.
+　・Same workload as on-premise development:38
+　・Reduced workload as on-premise development:18(26% of the documentation created during on-premise development)
+
+
+
+
+
+
+
+
+
+
