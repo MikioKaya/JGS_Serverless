@@ -1,0 +1,37 @@
+4. Considerations
+From the above verification results, we can confirm that the amount of document creation and construction time can be reduced in the development of a serverless architecture. The reason for this is that the implementation of the non-functional requirements is automated. The simplicity of the functions is one of the reasons for the reduction of construction time. The details of each are described below. We also discuss the fact that application of a serverless architecture does not reduce the development time compared to on-premises systems.
+
+4.1 Automated Implementation of Non-functional Requirements
+　We explain the reason using usage patterns of cloud services and the serverless liability model (Figure 1).
+- Infrastructure as a Service (IaaS)
+The infrastructures below the "virtualization" are highly abstracted by cloud providers, so users can save a lot of labor in deploying, building, and managing them.
+- PaaS (Platform as a Service)
+In addition to the features of IaaS, a "middleware runtime" is provided. The degree of freedom and flexibility is limited because it depends on the specifications of the provider, but the introduction and configuration of various middleware and runtimes can be labor-saving. In addition, features to improve the scalability and availability of the system are provided and are configurable.
+- Serverless
+In addition to the features of IaaS and PaaS described above, it has built-in features to improve scalability and availability. The amount of design (documentation) and construction work is reduced because the user's responsibility for configuration is lower.
+Using the services (DynamoDB and Lambda) used in the construction of the system, we confirm that the scalability and availability of these services are improved.
+
+DynamoDB
+- Scalability
+The performance of DynamoDB is determined by increasing or decreasing the number of capacity units. The user can set the number of capacity units appropriately according to the frequency of reading and writing data required by the system, and the size of data items (read/write). Set it up. or Auto Scaling is available [6].
+- Availability
+By default, data is distributed in three availability zones; for DynamoDB global tables (multi-database deployed in multiple regions), the service level agreement (SLA) is 99.999% or higher [7].
+
+Lambda
+- Scalability
+　Instances processing Lambda functions are automatically scaled and processed in parallel [8].
+- Availability
+　Lambda executes functions in multiple availability zones. Therefore, when a service interruption occurs in one zone, event processing is guaranteed to continue [8].
+
+As mentioned above, the serverless system has built-in features to improve scalability and availability. Users can select the functions (back-end connection, scalability, backup, etc.) provided by each serverless service according to their requirements and decide on the settings. In addition, the execution is guaranteed by the cloud provider, limiting the scope of user design and reducing the amount of time spent on building non-functional parts and creating documentation compared to developing in an on-premise environment.
+
+4.2 Simplifying the Functions
+　Each Lambda function is designed to have one or two purposes and to be stateless. Because of the simplicity of the functions, the number of program steps is small. This reduces the coding time and makes it easier to test. Also, since it is stateless, there is no need to consider the management of session information. This reduces the development time.
+
+4.3 Conclusion.
+　By using a serverless architecture, we can shorten the development time until the release of a service and provide it quickly. As a result, we can say that business agility is improved.
+
+4.4 Work that is not reduced by the application of a serverless architecture
+　In this study, we could not confirm the shortening of the development period for business logic and application development. Users are responsible for analyzing the current state of the business, defining business requirements, designing the structure of the application, and designing the data to be used in order to clarify the flow of the business to be realized.
+
+Translated with www.DeepL.com/Translator (free version)
