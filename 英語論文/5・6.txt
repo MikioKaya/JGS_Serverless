@@ -21,7 +21,7 @@ The following issues were identified from this review.
 Lambda関数の開発時に，それぞれの関数で開発者の得意な言語を選定したため，複数言語が混在したシステムとなった．
 ーLambda関数を開発した時、それぞの関数で開発者の得意な開発言語を選択した。その結果、複数の開発言語が混在したシステムが構築された。
 When we developed the Lambda functions, the developer's favorite development language was selected for each function.
-As a result, a system with a mixture of multiple development languages was built.
+As a result, a system with a mixture of multiple development languages was constructed.
 
 適切な言語を選択する自由度が増す反面，保守性が低くなるため，開発工程前に言語を選定するのが望ましい．
 ー自由に適切な開発言語を選択できる機会が増える。しかし、複数の開発言語で開発することは、保守性が低くなるため、開発工程前に開発言語を選択するのが望ましい。
@@ -37,7 +37,7 @@ Since the verification was done by a person who had no experience in system deve
 a total of about one month was spent on learning beforehand(basic concepts of AWS, each service specification, etc.)
 
 AWSが提供するサービスは日進月歩で進化しており，エンタープライズレベルでの開発を行うためには，現場のエンジニアは当然，意思決定権のある経営者においても知識の習得が必要になる．
-ーAWSが提供するサービスは日進月歩で進化しており、企業向けシステムの開発を行うためには、現場のエンジニアだけでなく、意思決定権wp保持している経営者も知識の習得が必要になる。
+ーAWSが提供するサービスは日進月歩で進化しており、企業向けシステムの開発を行うためには、現場のエンジニアだけでなく、意思決定権を保持している経営者も知識の習得が必要になる。
 The services provided by AWS are constantly evolving, and in order to develop enterprise systems, not only the engineers on site but also the executives who hold the decision-making authority need to acquire knowledge.
 
 しかし，有識者が存在していたとしても，各部門・領域に点在している状態では，組織としてエンタープライズレベルの開発を推進していくことは難しい．
@@ -53,7 +53,7 @@ Therefore, in order to promote the development of systems using the cloud, it is
 
 サーバレスアーキテクチャーを適用することで，開発時に作成するドキュメント量と構築作業量が削減され，ビジネスアジリティが向上することが確認された．
 ー
-We have confirmed that the serverless architecture improves business agility by reducing the amount of documentation and system build work created during development.
+We have confirmed that the serverless architecture improves business agility by reducing the amount of documentation and construction work created during development.
 
 加えて，今回検証できていない以下の2つの観点を追求することで，更にビジネスアジリティを向上させる可能性があると考える．
 ー
@@ -89,26 +89,6 @@ We will continue our research on the possibility of improving business agility b
 
 謝辞
 　本論文の作成にあたっては，日本アイ・ビー・ エム株式会社 北川衛様より多くの助言を頂きました．あらためて深謝いたします．
-
-Acknowledgements
-　We would like to thank Mamoru Kitagawa of IBM Japan, Ltd. for his advice on the preparation of this paper. Again, my deepest apologies to you.
- 
-////////
-以下、英語のみをまとめたもの
-////////
-
-５．Issues on applying serverless architecture
-The following issues were identified from this review.
-
-5.1 Selecting a Development Language
-When we developed the Lambda functions, the developer's favorite development language was selected for each function. As a result, a system with a mixture of multiple development languages was built.
-More opportunities to freely choose an appropriate development language. However, it is preferable to select a development language before the development process because developing in multiple development languages is less serviceability.
-
-5.2 Developing the Cloud Workforce
-Since the verification was done by a person who had no experience in system development using AWS, a total of about one month was spent on learning beforehand(basic concepts of AWS, each service specification, etc.). The services provided by AWS are constantly evolving, and in order to develop enterprise systems, not only the engineers on site but also the executives who hold the decision-making authority need to acquire knowledge. However, it is difficult to promote the development of enterprise systems as an organization when the experts are scattered in different departments and fields. Therefore, in order to promote the development of systems using the cloud, it is desirable to establish a specialized organization that consolidates knowledge and develops human resources across different fields.
-
-６．Future Prospects
-We have confirmed that the serverless architecture improves business agility by reducing the amount of documentation and system build work created during development. In addition, we believe that there is a possibility to further improve business agility by pursuing the following two perspectives, which have not been verified in this study. The first is to focus on development work. By adopting a serverless architecture, we can reduce the amount of labor needed for operations, and reuse the cost and manpower used for operations for development work. As a result, we believe that faster development will be possible. The second is to make applications into microservices. By loosely connecting each application, we believe that it is possible to localize the scope of support for additional functions and specification changes, and to develop at low cost and with short delivery times. In addition to the above perspectives, it is expected that the combination of Domain-driven design and Agile development will have a greater effect. However, in order to achieve these two points, it is necessary to develop human resources with advanced technical skills and rich knowledge of Cloud computing, as well as to foster an integrated system of development and operation, and an organizational culture that promotes agile development. We will continue our research on the possibility of improving business agility by applying a serverless architecture that includes these perspectives.
 
 Acknowledgements
 　We would like to thank Mamoru Kitagawa of IBM Japan, Ltd. for his advice on the preparation of this paper. Again, my deepest apologies to you.
