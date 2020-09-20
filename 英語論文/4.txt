@@ -3,6 +3,7 @@ From the above verification results, we can confirm that the amount of document 
 
 4.1 Automated Implementation of Non-functional Requirements
 　We explain the reason using usage patterns of cloud services and the serverless liability model (Figure 1).
+ We can reduce construction time by these infrastructure in figure 1. 
 - Infrastructure as a Service (IaaS)
 The infrastructures below the "virtualization" are highly abstracted by cloud providers, so users can save a lot of labor in deploying, building, and managing them.
 - PaaS (Platform as a Service)
@@ -10,7 +11,7 @@ In addition to the features of IaaS, a "middleware runtime" is provided. The deg
 - Serverless
 In addition to the features of IaaS and PaaS described above, it has built-in features to improve scalability and availability. The amount of design (documentation) and construction work is reduced because the user's responsibility for configuration is lower.
 Using the services (DynamoDB and Lambda) used in the construction of the system, we confirm that the scalability and availability of these services are improved.
-
+Details are as follows.
 DynamoDB
 - Scalability
 The performance of DynamoDB is determined by increasing or decreasing the number of capacity units. The user can set the number of capacity units appropriately according to the frequency of reading and writing data required by the system, and the size of data items (read/write). Set it up. or Auto Scaling is available [6].
@@ -33,5 +34,3 @@ As mentioned above, the serverless system has built-in features to improve scala
 
 4.4 Work that is not reduced by the application of a serverless architecture
 　In this study, we could not confirm the shortening of the development period for business logic and application development. Users are responsible for analyzing the current state of the business, defining business requirements, designing the structure of the application, and designing the data to be used in order to clarify the flow of the business to be realized.
-
-Translated with www.DeepL.com/Translator (free version)
