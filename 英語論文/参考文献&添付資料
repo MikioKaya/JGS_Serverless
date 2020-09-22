@@ -1,0 +1,20 @@
+[1]
+
+[2]JGS研究2019プロジェクトチームIA001 松尾 直弥，サーバレスアーキテクチャーの適用検討プロセスの提案，2019年7月31日  
+
+   JGS Research 2019 Project Team Papers IA001 Naoya Matsuo, Serverless Architecture No Tekiyo Kento Process no Teian , 2019.07.01 
+
+[3]Gartner,Magic Quadrant for Cloud Infrastructure as a Service, Worldwide, 2019.07.16  
+
+[4]経済産業省商務・サービスグループ キャッシュレス推進室，キャッシュレスの現状及び意義，2020年1月  
+
+   Ministry of Economy, Trade and Industry, Commerce and Service Industry Policy Group, Cashless Payment Promotion Office,Cashless no Genjyo Oyobi Igi, 2020.01  
+
+[5]Serverless Airline Booking, https://github.com/aws-samples/aws-serverless-airline-booking, 2020.05  
+
+[6]AWS DynamoDB Read/Write Capacity Mode, https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html, 2020.06  
+
+[7]AWS DynamoDB Service Level Agreement, https://aws.amazon.com/jp/dynamodb/sla/, 2020.06  
+
+[8]AWS Lambda function scaling, https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/invocation-scaling.html, 2020.06  
+
