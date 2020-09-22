@@ -1,8 +1,11 @@
-[1]
+＜参考文献＞
+[1]デジタルトランスフォーメーションに向けた研究会，DXデジタルトランスフォーメーションレポート～IT システム「2025 年の崖」の克服と DX の本格的な展開～，2018年9月7日
+
+　　Digital Transformation ni Muketa Kenkyukai, 
 
 [2]JGS研究2019プロジェクトチームIA001 松尾 直弥，サーバレスアーキテクチャーの適用検討プロセスの提案，2019年7月31日  
 
-   JGS Research 2019 Project Team Papers IA001 Naoya Matsuo, Serverless Architecture No Tekiyo Kento Process no Teian , 2019.07.01 
+   JGS Research 2019 Project Team Papers IA001 Naoya Matsuo, Serverless Architecture no Tekiyo Kento Process no Teian , 2019.07.01 
 
 [3]Gartner,Magic Quadrant for Cloud Infrastructure as a Service, Worldwide, 2019.07.16  
 
@@ -17,4 +20,8 @@
 [7]AWS DynamoDB Service Level Agreement, https://aws.amazon.com/jp/dynamodb/sla/, 2020.06  
 
 [8]AWS Lambda function scaling, https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/invocation-scaling.html, 2020.06  
+
+[Translated from Japanese.]
+
+＜添付＞
 
